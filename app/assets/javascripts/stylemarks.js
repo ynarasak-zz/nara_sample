@@ -8,7 +8,7 @@ window.onload = function() {
   try {
     var url_map = { 12345:'http://juna.officialblog.jp/archives/33522044.html', 1:'https://corp.stylemarks.jp/'}
     var keys = location.pathname.match(/.*[/](.*?)$/);
-    var key = keys[keys.length-1]
+    var key = keys[keys.length-1].replace('.html', '');
     if( url_map[key] === void 0){
       document.body.style = 'visible'
       throw new Error('end');
